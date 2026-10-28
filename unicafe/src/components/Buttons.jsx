@@ -1,10 +1,15 @@
+import { useFeedBackActions } from '../store'
+
 const Buttons = () => {
+
+  const { good: giveGood, neutral: giveNeutral, bad: giveBad } = useFeedBackActions()
+
   return (
     <div>
       <h2>give feedback</h2>
-      <button>good</button>
-      <button>neutral</button>
-      <button>bad</button>
+      <button onClick={giveGood}>good</button>
+      <button onClick={giveNeutral}>neutral</button>
+      <button onClick={giveBad}>bad</button>
     </div>
   )
 }
