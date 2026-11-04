@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "playwright test",
+    "server": "npx json-server db-test.json --port 3001",
     "verify:tests-exist": "node verify-tests-exist.mjs",
     "verify:tests-not-vacuous": "node verify-tests-not-vacuous.mjs",
     "test:mutation": "node verify-tests-mutation.mjs",

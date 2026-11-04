@@ -2,12 +2,18 @@ import { useAnecdoteActions } from '../store'
 
 const AnecdoteForm = () => {
 
-  const { add } = useAnecdoteActions()
+  const { add, setNotification } = useAnecdoteActions()
 
-  const addAnecdote = (event) => {
+  const addAnecdote = async (event) => {
     event.preventDefault()
-    const anecdote = event.target.anecdote.value
-    add(anecdote)
+    const content = event.target.anecdote.value
+
+    try {
+      await add(content)
+      setNotification(`New anecdote ${content} added`)
+    } catch {
+      setNotification('Failed to create anecdote')
+    }
     event.target.reset()
   }
 
