@@ -62,6 +62,8 @@ const useAnecdoteStore = create((set) => ({
   },
 }))
 
+export default useAnecdoteStore
+
 export const useAnecdotes = () => {
   const anecdotes = useAnecdoteStore((state) => state.anecdotes)
   const filter = useAnecdoteStore((state) => state.filter)
@@ -72,6 +74,8 @@ export const useAnecdotes = () => {
 
   return anecdotes
 }
+
+export const useFilter = () => useAnecdoteStore((state) => state.filter)
 
 export const useAnecdotesNotification = () => useAnecdoteStore((state) => state.notification)
 

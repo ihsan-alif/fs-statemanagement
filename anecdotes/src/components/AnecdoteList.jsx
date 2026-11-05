@@ -28,7 +28,7 @@ const AnecdoteList = () => {
   return (
     <div>
       {sortedAnecdotes.map((anecdote) => (
-        <div key={anecdote.id}>
+        <div key={anecdote.id} data-testid='anecdote'>
           <div>{anecdote.content}</div>
           <div>
             has {anecdote.votes}
