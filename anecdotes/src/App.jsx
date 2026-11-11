@@ -2,16 +2,16 @@ import AnecdoteList from './components/AnecdoteList'
 import AnecdoteForm from './components/AnecdoteForm'
 import Notification from './components/Notification'
 import Filter from './components/Filter'
-import { useAnecdoteActions } from './store'
-import { useEffect } from 'react'
+// import { useAnecdoteActions } from './store'
+// import { useEffect } from 'react'
 
 const App = () => {
 
-  const { initialize } = useAnecdoteActions()
+  // const { initialize } = useAnecdoteActions()
 
-  useEffect(() => {
-    initialize()
-  }, [initialize])
+  // useEffect(() => {
+  //   initialize()
+  // }, [initialize])
 
   return (
     <div>
